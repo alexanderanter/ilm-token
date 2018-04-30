@@ -4,10 +4,10 @@ import "./DelegateProxy.sol";
 import "./Delegatable.sol";
 
 /**
- * @title Parsec
+ * @title Proxy
  * Basic proxy implementation to controller
  */
-contract Parsec is Delegatable, DelegateProxy {
+contract Proxy is Delegatable, DelegateProxy {
 
   /**
    * @dev Function to invoke all function that are implemented in controler
