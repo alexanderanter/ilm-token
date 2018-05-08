@@ -24,6 +24,18 @@ Option 2. You can use Reftoken nodes:
 
 Setup your token parameters (name, symbol and decimals) in Controller.sol, your decimals and totalSupply in migrations/2_deploy_contracts.js. Then, in the truffle console you have open, run `migrate`.
 
+# Usage
+
+If you want to create a transaction with your token, you have to use a Controller facade on top of the Proxy contract:
+```
+var ctrl = Controller.at([proxy.address])
+```
+
+Then, you can use any of the token functions, like minting:
+```
+ctrl.mint([holder address], amount)
+```
+
 # Binding Mainnet
 
 ```
