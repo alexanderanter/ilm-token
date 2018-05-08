@@ -5,10 +5,17 @@ const PrivateKeyProvider = require("truffle-privatekey-provider");
 
 module.exports = {
 	networks: {
+		development: {
+        host: "localhost",
+	        port: 8545,
+	        gasPrice: 10000000000,
+	        gas: 5000000,
+	        network_id: "*" // Match any network id
+	    },
 		kovan: {
 			provider: process.env.KOVAN_PRIV ? new PrivateKeyProvider(process.env.KOVAN_PRIV, "https://dev.reftoken.com") : "",
 			gasPrice: 10000000000, // 10 gwei
-			gas: 8000000,
+			gas: 7000000,
 			network_id: 4
 		},
 		mainnet: {
