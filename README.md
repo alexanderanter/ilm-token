@@ -36,7 +36,10 @@ Deploying Controller...
 0
 ```
 When its done, it will still be blinking in the console, click the up arrow to get back to truffle console
+You will now have the token contract address next to Proxy:  in the console
+and the controller address next to Controller:
 
+Make a note of both these addresses.
 
 # Usage
 
