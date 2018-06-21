@@ -57,7 +57,7 @@ ctrl.mint("holder address", amount)
 to mint tokens be aware of the decimals. For example if you gonna mint 3 tokens. You would write
 3*10**decimals
 or
-300000*10**18
+3*10**18
 if your token got 18 decimals.
 
 # Binding Mainnet
