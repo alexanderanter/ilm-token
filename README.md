@@ -43,15 +43,22 @@ Make a note of both these addresses.
 
 # Usage
 
-If you want to create a transaction with your token, you have to use a Controller facade on top of the Proxy contract:
+If you want to create a transaction with your token, you have to use a Controller facade on top of the Proxy contract,
+put the token contract address between the quotes:
 ```
-var ctrl = Controller.at([proxy.address])
+var ctrl = Controller.at("proxy.address")
 ```
 
-Then, you can use any of the token functions, like minting:
+Then, you can use any of the token functions, like minting, put the address between the quotes:
 ```
-ctrl.mint([holder address], amount)
+ctrl.mint("holder address", amount)
 ```
+
+to mint tokens be aware of the decimals. For example if you gonna mint 3 tokens. You would write
+3*10**decimals
+or
+300000*10**18
+if your token got 18 decimals.
 
 # Binding Mainnet
 
