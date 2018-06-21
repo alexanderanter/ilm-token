@@ -15,14 +15,28 @@ Option 1. If you are running your local node connect to it like this:
 ```
 npm run console --network development
 ```
+or try
+```
+truffle console --network development
+```
 
 Option 2. You can use Reftoken nodes:
 1. Ensure you provide private key for truffle to sign your transactions. Create `.env` file with the key of the account to use. Use `.env.template` as a template.
-2. Then use `mainnet` or `kovan` network. E.g. `npm run console --network mainnet`
+2. Then use `mainnet` or `kovan` network. E.g. `truffle console --network kovan`
 
 # Deploy a new token
 
 Setup your token parameters (name, symbol and decimals) in Controller.sol, your decimals and totalSupply in migrations/2_deploy_contracts.js. Then, in the truffle console you have open, run `migrate`.
+you should see something like
+```
+Deploying Controller...
+  ... 0xasdsadasdadaa6250f9f1a30a9fbb24068efd68b5656565656b65a4ec
+  Controller: 0xbadadsaasdaasde99a3bb44eaea4c11835454538c
+  ... 0x0asdadssadasc0a6aa64f23d6888d46645454545456adc9d4a0c3bb12a49d
+0
+```
+When its done, it will still be blinking in the console, click the up arrow to get back to truffle console
+
 
 # Usage
 
