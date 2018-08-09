@@ -1,11 +1,11 @@
 
 pragma solidity ^0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 import "zeppelin-solidity/contracts/token/ERC20/PausableToken.sol";
 
-contract Controller is ERC827Token, MintableToken, PausableToken {
+contract Controller is MintableToken, PausableToken {
   address public thisAddr; // matches delegation slot in proxy
   uint256 public cap;      // the max cap of this token
   string public constant name = "COIN"; // solium-disable-line uppercase
