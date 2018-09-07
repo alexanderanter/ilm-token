@@ -20,7 +20,7 @@ or try
 truffle console --network development
 ```
 
-Option 2. You can use Reftoken nodes:
+Option 2. You can use Infura nodes:
 1. Ensure you provide private key for truffle to sign your transactions. Create `.env` file with the key of the account to use. Use `.env.template` as a template.
 2. Then use `mainnet` or `kovan` network. E.g. `truffle console --network kovan`
 
