@@ -12,10 +12,10 @@ module.exports = async function(deployer) {
     await deployer.deploy(Controller);
     const controller = await Controller.deployed();
     // create binding of proxy with controller interface
-    let parsec = Controller.at(proxy.address);
+    let token = Controller.at(proxy.address);
     // use binding
-    await parsec.initialize(controller.address, supply*(10**decimals));
+    await token.initialize(controller.address, supply*(10**decimals));
     // check result
-    let cap = await parsec.cap();
+    let cap = await token.cap();
     console.log(cap.toNumber());
 };

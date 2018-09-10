@@ -1,6 +1,3 @@
-# Repository base
-Based on OpenZeppelin, forked from ParsecLabs (https://github.com/parsec-labs/parsec-token).
-
 # How to use
 Download/clone this repo, open a terminal in the folder and run:
 
